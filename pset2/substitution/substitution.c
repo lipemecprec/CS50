@@ -23,7 +23,7 @@ char *cipher_tolower(char *str)
     while (str[i] != '\0')
     {
         c = str[i];
-        if(isalpha(c))
+        if (isalpha(c))
         {
             str[i] = tolower(c);
         }
@@ -75,7 +75,7 @@ char *substitution(char *str, char *cipher)
         {
             offset = 32;
         }
-        if(isalpha(c))
+        if (isalpha(c))
         {
             i_cipher = tolower(c) - 'a';
             str[i] = cipher[i_cipher] - offset;
@@ -91,7 +91,7 @@ int main(int argc, char *argv[])
     char *str;
     int is_valid;
 
-    if(argc != 2)
+    if (argc != 2)
     {
         printf("Usage: ./substitution key\n");
         return (1);
